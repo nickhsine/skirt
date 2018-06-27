@@ -236,33 +236,33 @@
 
         .a4-bg .row2 {
 
-            bottom: calc(10/390*100%);
+            bottom: calc(8/390*100%);
             animation-delay: .8s;
         }
 
         .a4-bg .row3 {
 
-            bottom: calc(10/390*100%);
+            bottom: calc(8/390*100%);
             animation-delay: 1.3s;
         }
 
         .a4-bg .row4 {
 
-            bottom: calc(10/390*100%);
+            bottom: calc(8/390*100%);
             animation-delay: 1.8s;
         }
 
         .a4-bg .row5 {
 
-            bottom: calc(10/390*100%);
+            bottom: calc(8/390*100%);
             animation-delay: 2.3s;
         }
 
         .a4-bg .row6 {
-            bottom: calc(10/390*100%);
+            bottom: calc(1/500*100%);
             animation-delay: 2.8s;
-            width: calc(345/345*100%);
-            left: calc(17/540*100%);
+            width: calc(360/345*100%);
+            left: calc(1/540*100%);
         }
 
         .a4-bg .row7 {
@@ -375,7 +375,7 @@
                 margin-left: auto;
                 margin-right: auto;
             }
-     
+
             .float-right {
                 float: right;
                 width: 360px;
@@ -589,50 +589,53 @@
             table.shown-on-mobile {
                 display: table;
             }
-            .position-relative-top {
-                position: relative;
-                top: 0px;
-            }
-            .position-absolute-top-left {
-                position: absolute;
-                top: 25%;
-
-            }
 
 
-            @media screen and (min-width: 768px) {
-                table.hidden-on-mobile {
-                    display: table;
-                    max-width: 770px;
-                    margin-left: auto;
-                    margin-right: auto;
-                }
+        }
 
 
-
-
-
+        @media screen and (min-width: 768px) {
+            table.hidden-on-mobile {
+                display: table;
+                max-width: 770px;
+                margin-left: auto;
+                margin-right: auto;
             }
 
-            @media screen and (min-width: 500px) {
-                table.hidden-on-mobile {
-                    display: table;
-                    max-width: 770px;
-                    margin-left: auto;
-                    margin-right: auto;
-                }
 
-                table.shown-on-mobile {
-                    display: none;
-                }
 
-            }
-            @media screen and (max-width: 500px) {
-                article h1 {
-                    font-size: 30px;
-                }
+
+
+        }
+
+        @media screen and (min-width: 500px) {
+            table.hidden-on-mobile {
+                display: table;
+                max-width: 770px;
+                margin-left: auto;
+                margin-right: auto;
             }
 
+            table.shown-on-mobile {
+                display: none;
+            }
+
+        }
+
+        @media screen and (max-width: 500px) {
+            article h1 {
+                font-size: 30px;
+            }
+        }
+
+        .position-relative-top {
+            position: relative;
+            top: 0px;
+        }
+
+        .position-absolute-top-left {
+            position: absolute;
+            top: 1400px;
         }
 
         .Base-map {
@@ -667,7 +670,7 @@
             font-weight: 500;
             font-size: 40px;
             margin: auto;
-            color: white;
+
 
         }
 
@@ -704,23 +707,127 @@
 
 </head>
 
-<body style="background-color: gray">
+<body style="background-color: #B7DBAA">
 
     <article>
         <figure class="position-relative-top">
             <img src="area-14/1.jpg" alt="img1-01 image of this article" width="100%" />
         </figure>
 
-        <div id=#bar class="word1 position-absolute-top-left black-bar word1">
-            <h1>它「衣舊」美麗，但「衣燃」不環保</h1>
+        <div>
+            <h1 style="font-weight: bold;margin-top: 30px">它「衣舊」美麗，但「衣燃」不環保</h1>
+        </div>
+        <div style="margin-bottom:10px">
+            <span class="author">採訪編輯／
+                <b>
+                    <a href="https://www.facebook.com/profile.php?id=100001344265700" target="_blank"> 謝羽蓁</a>、
+                </b>
+                <b>
+                    <a href="https://www.facebook.com/profile.php?id=100000782258940" target="_blank"> 謝佩如 </a>、
+                </b>
+                <b>
+                    <a href="https://www.facebook.com/profile.php?id=100002617298606" target="_blank">劉芳妤</a>、
+                </b>
+                <b>
+                    <a href="https://www.facebook.com/profile.php?id=100002640666293" target="_blank">林宸佑 </a>
+                </b>
+
+            </span>
+
+        </div>
+        <div style="margin-bottom:10px">
+            <span class="author">技術執行／
+                <b>
+                    <a href="https://www.facebook.com/profile.php?id=100001344265700" target="_blank"> 白育綸觀點</a>、
+                </b>
+                <b>
+                    <a href="https://www.facebook.com/profile.php?id=100000782258940" target="_blank"> 狂大 </a>、
+                </b>
+                <b>
+                    <a href="https://www.facebook.com/profile.php?id=100002617298606" target="_blank">火哥</a>、
+                </b>
+                <b>
+                    <a href="https://www.facebook.com/profile.php?id=100002640666293" target="_blank">嘉容 </a>、
+                </b>
+                <b>
+                    <a href="https://www.facebook.com/profile.php?id=100002640666293" target="_blank">羽蓁</a>、
+                </b>
+                <b>
+                    <a href="https://www.facebook.com/profile.php?id=100002640666293" target="_blank">陳棟 </a>、
+                </b>
+
+            </span>
+
         </div>
         </figure>
         <p class="introduction"> 與我們形影不離的衣物，當它功成身退， 民眾常選擇丟進舊衣回收箱或交由清潔隊處理。然而這些被遺棄的衣物， 你是否曾想過，它們可能是造成台灣垃圾危機的一大因子？ 事實上，舊衣經過回收，它們並非都能再找到新主人...
         </p>
+        <!--- 成衣長條圖-->
+        <div class="bg">
+            <div id="area-2" class="animation-block a2-bg">
+                <img src="area-2/全台舊衣量.png" class="bed"></img>
+                <!-- column one angels-->
+                <img src="area-2/shirt.png" class="angel fadeInUp row1 column1"></img>
+                <img src="area-2/shirt.png" class="angel fadeInUp row2 column1"></img>
 
-        <figure>
-            <img src="area-14/2.jpg" alt="img3-sale image of this article" width="100%" />
-        </figure>
+
+                <!-- column one number -->
+                <img src="area-2/a2-data-7.png" class="number fadeInUpBig" style="width: 12%; top: 66%; left: 11%; animation-delay: 2.9s"></img>
+
+                <!-- column two angels -->
+                <img src="area-2/shirt.png" class="angel fadeInUp row1 column2"></img>
+                <img src="area-2/shirt.png" class="angel fadeInUp row2 column2"></img>
+
+                <!-- column two number -->
+                <img src="area-2/a2-data-6.png" class="number fadeInUpBig" style="width: 12%;top: 63%; left: 24%; animation-delay: 2.9s"></img>
+
+                <!-- column three angels -->
+                <img src="area-2/shirt.png" class="angel fadeInUp row1 column3"></img>
+                <img src="area-2/shirt.png" class="angel fadeInUp row2 column3"></img>
+                <img src="area-2/shirt.png" class="angel fadeInUp row3 column3"></img>
+
+                <!-- column three number -->
+                <img src="area-2/a2-data-5.png" class="number fadeInUpBig" style="width: 13%;top: 55%; left: 33.5%; animation-delay: 2.9s"></img>
+
+                <!-- column four angels -->
+                <img src="area-2/shirt.png" class="angel fadeInUp row1 column4"></img>
+                <img src="area-2/shirt.png" class="angel fadeInUp row2 column4"></img>
+                <img src="area-2/shirt.png" class="angel fadeInUp row3 column4"></img>
+                <img src="area-2/shirt.png" class="angel fadeInUp row4 column4"></img>
+
+                <!-- column four number -->
+                <img src="area-2/a2-data-4.png" class="number fadeInUpBig" style="width: 13%;top: 44%; left: 46%; animation-delay: 2.9s"></img>
+
+
+                <!-- column five angels -->
+                <img src="area-2/shirt.png" class="angel fadeInUp row1 column5"></img>
+                <img src="area-2/shirt.png" class="angel fadeInUp row2 column5"></img>
+                <img src="area-2/shirt.png" class="angel fadeInUp row3 column5"></img>
+
+                <!-- column five number -->
+                <img src="area-2/a2-data-3.png" class="number fadeInUpBig" style="width: 13%;top: 55%; left: 58.5%; animation-delay: 2.9s"></img>
+                <!-- column six angels -->
+                <img src="area-2/shirt.png" class="angel fadeInUp row1 column6"></img>
+                <img src="area-2/shirt.png" class="angel fadeInUp row2 column6"></img>
+                <img src="area-2/shirt.png" class="angel fadeInUp row3 column6"></img>
+                <img src="area-2/shirt.png" class="angel fadeInUp row4 column6"></img>
+                <img src="area-2/shirt.png" class="angel fadeInUp row5 column6"></img>
+                <!-- column six number -->
+                <img src="area-2/a2-data-2.png" class="number fadeInUpBig" style="width: 16%;top: 31%; left: 68%; animation-delay: 2.9s"></img>
+                <!-- column seven angels -->
+                <img src="area-2/shirt.png" class="angel fadeInUp row1 column7"></img>
+                <img src="area-2/shirt.png" class="angel fadeInUp row2 column7"></img>
+                <img src="area-2/shirt.png" class="angel fadeInUp row3 column7"></img>
+                <img src="area-2/shirt.png" class="angel fadeInUp row4 column7"></img>
+                <img src="area-2/shirt.png" class="angel fadeInUp row5 column7"></img>
+                <img src="area-2/shirt.png" class="angel fadeInUp row6 column7"></img>
+                <img src="area-2/shirt.png" class="angel fadeInUp row7 column7"></img>
+                <!-- column seven number -->
+                <img src="area-2/a2-data-1.png" class="number fadeInUpBig" style="width: 18%;top: 10%; left: 81.5%; animation-delay: 2.9s"></img>
+            </div>
+
+        </div>
+
         <figure>
             <img src="area-14/8.jpg" alt="img3-sale image of this article" width="100%" />
         </figure>
@@ -728,19 +835,17 @@
             台灣舊衣量逐年上升，「我覺得快時尚難辭其咎」。輔仁大學織品服裝學院院長蔡淑梨坦言，快時尚衣物搶搭流行且價格便宜，易吸引年輕人上門購買。臨床心理師林俊成說明，無論人們是想要追求潮流，還是不想錯過某一產品，這種時間相對落後感，會對個體產生一定程度的壓力。他進一步指出，為了促使消費者購物，業主常利用主打限量或快速更新樣式的手法，製造「稀缺效應」，讓消費者認為此商品可能短缺，便激起購物慾望。
         </p>
 
-        <div class="word3">
-            <h1>2016年全球成衣產值</h1>
-        </div>
 
-        <div class="bg area-title">
+       
+        <div class="bg area-title ">
             <div id="area-13" class="animation-block a4-bg">
-                <img src="area-13/b2-1.png" class="toy row1 fadeInDown"></img>
+                <img src="area-13/1_f.png" class="toy row1 fadeInDown"></img>
                 <img src="area-13/b2-2.png" class="toy base-row row2 rotateIn fadeInDown"></img>
                 <img src="area-13/b2-3.png" class="toy base-row row3 rotateIn fadeInDown"></img>
                 <img src="area-13/b2-4.png" class="toy base-row row4 rotateIn fadeInDown"></img>
                 <img src="area-13/b2-5.png" class="toy base-row row5 rotateIn fadeInDown"></img>
-                <img src="area-13/b2-6.png" class="toy row6 fadeInDown"></img>
-                <img src="area-13/b2-7.png" class="toy  row7 fadeInRightBig"></img>
+                <img src="area-13/2_f.png" class="toy row6 fadeInDown"></img>
+                <img src="area-13/3_f.png" class="toy  row7 fadeInRightBig"></img>
             </div>
 
             <p class="introduction">
@@ -804,76 +909,7 @@
             </div>
 
 
-            <div class="bg">
-                <div id="area-2" class="animation-block a2-bg">
-                    <img src="area-2/全台舊衣量.png" class="bed"></img>
-                    <!-- column one angels-->
-                    <img src="area-2/shirt.png" class="angel fadeInUp row1 column1"></img>
-                    <img src="area-2/shirt.png" class="angel fadeInUp row2 column1"></img>
-        
-        
-                    <!-- column one number -->
-                    <img src="area-2/a2-data-7.png" class="number fadeInUpBig" style="width: 12%; top: 66%; left: 11%; animation-delay: 2.9s"></img>
-        
-                    <!-- column two angels -->
-                    <img src="area-2/shirt.png" class="angel fadeInUp row1 column2"></img>
-                    <img src="area-2/shirt.png" class="angel fadeInUp row2 column2"></img>
-        
-                    <!-- column two number -->
-                    <img src="area-2/a2-data-6.png" class="number fadeInUpBig" style="width: 12%;top: 63%; left: 24%; animation-delay: 2.9s"></img>
-        
-                    <!-- column three angels -->
-                    <img src="area-2/shirt.png" class="angel fadeInUp row1 column3"></img>
-                    <img src="area-2/shirt.png" class="angel fadeInUp row2 column3"></img>
-                    <img src="area-2/shirt.png" class="angel fadeInUp row3 column3"></img>
-                
-                    <!-- column three number -->
-                    <img src="area-2/a2-data-5.png" class="number fadeInUpBig" style="width: 13%;top: 55%; left: 33.5%; animation-delay: 2.9s"></img>
-        
-                    <!-- column four angels -->
-                    <img src="area-2/shirt.png" class="angel fadeInUp row1 column4"></img>
-                    <img src="area-2/shirt.png" class="angel fadeInUp row2 column4"></img>
-                    <img src="area-2/shirt.png" class="angel fadeInUp row3 column4"></img>
-                    <img src="area-2/shirt.png" class="angel fadeInUp row4 column4"></img>
-        
-                    <!-- column four number -->
-                    <img src="area-2/a2-data-4.png" class="number fadeInUpBig" style="width: 13%;top: 44%; left: 46%; animation-delay: 2.9s"></img>
-        
-                    
-                    <!-- column five angels -->
-                    <img src="area-2/shirt.png" class="angel fadeInUp row1 column5"></img>
-                    <img src="area-2/shirt.png" class="angel fadeInUp row2 column5"></img>
-                    <img src="area-2/shirt.png" class="angel fadeInUp row3 column5"></img>
-        
-                    <!-- column five number -->
-                    <img src="area-2/a2-data-3.png" class="number fadeInUpBig" style="width: 13%;top: 55%; left: 58.5%; animation-delay: 2.9s"></img>
-                    <!-- column six angels -->
-                    <img src="area-2/shirt.png" class="angel fadeInUp row1 column6"></img>
-                    <img src="area-2/shirt.png" class="angel fadeInUp row2 column6"></img>
-                    <img src="area-2/shirt.png" class="angel fadeInUp row3 column6"></img>
-                    <img src="area-2/shirt.png" class="angel fadeInUp row4 column6"></img>
-                    <img src="area-2/shirt.png" class="angel fadeInUp row5 column6"></img>
-                    <!-- column six number -->
-                    <img src="area-2/a2-data-2.png" class="number fadeInUpBig" style="width: 16%;top: 31%; left: 68%; animation-delay: 2.9s"></img>
-                    <!-- column seven angels -->
-                    <img src="area-2/shirt.png" class="angel fadeInUp row1 column7"></img>
-                    <img src="area-2/shirt.png" class="angel fadeInUp row2 column7"></img>
-                    <img src="area-2/shirt.png" class="angel fadeInUp row3 column7"></img>
-                    <img src="area-2/shirt.png" class="angel fadeInUp row4 column7"></img>
-                    <img src="area-2/shirt.png" class="angel fadeInUp row5 column7"></img>
-                    <img src="area-2/shirt.png" class="angel fadeInUp row6 column7"></img>
-                    <img src="area-2/shirt.png" class="angel fadeInUp row7 column7"></img>
-                    <!-- column seven number -->
-                    <img src="area-2/a2-data-1.png" class="number fadeInUpBig" style="width: 18%;top: 10%; left: 81.5%; animation-delay: 2.9s"></img>
-                </div>
-                <p class="a2-p-font">
-                    台灣1歲以下嬰兒死亡率在OECD國家排名第5高，偏高的嬰兒死亡率反映兒童醫療照顧和資源分配不均的問題。
-                </p>
-                <p class="a2-p-font">
-                        根據統計，19歲以下兒童急診人數約有103萬人，其中以0～4歲嬰幼兒比例最高。當嬰兒有突發狀況，第一時間的診治可能就是生死一瞬。
-                    </p>
-            </div>
-            
+
 
             <!-- Optional JavaScript -->
             <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -961,48 +997,7 @@
             <p class="introduction"> 臨床心理師林俊成也說明，消費者若要避免過度及衝動消費，購物前應先思考此商品為自身想要或是需要。但對於易衝動的購物者而言，遇到自己想要的產品，常會合理化其消費行為，說服自己該產品為必需品。因此林俊成建議，這類民眾可以尋求較理性的購物者陪同消費，幫忙看管荷包。
             </p>
 
-            <div style="margin-bottom:10px">
-                <span class="author">採訪編輯／
-                    <b>
-                        <a href="https://www.facebook.com/profile.php?id=100001344265700" target="_blank"> 謝羽蓁</a>、
-                    </b>
-                    <b>
-                        <a href="https://www.facebook.com/profile.php?id=100000782258940" target="_blank"> 謝佩如 </a>、
-                    </b>
-                    <b>
-                        <a href="https://www.facebook.com/profile.php?id=100002617298606" target="_blank">劉芳妤</a>、
-                    </b>
-                    <b>
-                        <a href="https://www.facebook.com/profile.php?id=100002640666293" target="_blank">林宸佑 </a>
-                    </b>
 
-                </span>
-
-            </div>
-            <div style="margin-bottom:10px">
-                <span class="author">技術執行／
-                    <b>
-                        <a href="https://www.facebook.com/profile.php?id=100001344265700" target="_blank"> 白育綸觀點</a>、
-                    </b>
-                    <b>
-                        <a href="https://www.facebook.com/profile.php?id=100000782258940" target="_blank"> 狂大 </a>、
-                    </b>
-                    <b>
-                        <a href="https://www.facebook.com/profile.php?id=100002617298606" target="_blank">火哥</a>、
-                    </b>
-                    <b>
-                        <a href="https://www.facebook.com/profile.php?id=100002640666293" target="_blank">嘉容 </a>、
-                    </b>
-                    <b>
-                        <a href="https://www.facebook.com/profile.php?id=100002640666293" target="_blank">羽蓁</a>、
-                    </b>
-                    <b>
-                        <a href="https://www.facebook.com/profile.php?id=100002640666293" target="_blank">陳棟 </a>、
-                    </b>
-
-                </span>
-
-            </div>
     </article>
     <footer>
         <table class="shown-on-mobile">
