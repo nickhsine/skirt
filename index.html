@@ -953,71 +953,90 @@
             <p class="why2">
                 台灣二手衣流向
             </p>
-            <div class="bg">
-                <script src="https://d3js.org/d3.v3.min.js"></script>
-                <script class="some">
-                    var div = d3.select("body").append("div").attr("class", "toolTip");
-                    var dataset = [
-                        { name: '外銷', total: 8124, percent: 67.9 },
-                        { name: '焚燒', total: 1610, percent: 13.5 },
-                        { name: '內銷', total: 660, percent: 5.5 }
-                    ];
-                    var width = 960,
-                        height = 500,
-                        radius = Math.min(width, height) / 2;
-                    var color = d3.scale.ordinal()
-                        .range(["#99DD00", "#BBFF00", "#CCFF33", "#6b486b", "#a05d56"]);
-                    var arc = d3.svg.arc()
-                        .outerRadius(radius - 10)
-                        .innerRadius(radius - 70);
-                    var pie = d3.layout.pie()
-                        .sort(null)
-                        .startAngle(1.1 * Math.PI)
-                        .endAngle(3.1 * Math.PI)
-                        .value(function (d) { return d.total; });
-                    var svg = d3.select("body").append("svg")
-                        .attr("width", width)
-                        .attr("height", height)
-                        .append("g")
-                        .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
-                    var g = svg.selectAll(".arc")
-                        .data(pie(dataset))
-                        .enter().append("g")
-                        .attr("class", "arc");
-                    g.append("path")
-                        .style("fill", function (d) { return color(d.data.name); })
-                        .transition().delay(function (d, i) {
-                            return i * 500;
-                        }).duration(1500)
-                        .attrTween('d', function (d) {
-                            var i = d3.interpolate(d.startAngle + 0.1, d.endAngle);
-                            return function (t) {
-                                d.endAngle = i(t);
-                                return arc(d)
-                            }
-                        });
-                    g.append("text")
-                        .attr("transform", function (d) { return "translate(" + arc.centroid(d) + ")"; })
-                        .attr("dy", ".35em")
-                        .transition()
-                        .delay(1000)
-                        .text(function (d) { return d.data.name; });
-                    d3.selectAll("path").on("mousemove", function (d) {
-                        div.style("left", d3.event.pageX + 10 + "px");
-                        div.style("top", d3.event.pageY - 25 + "px");
-                        div.style("display", "inline-block");
-                        div.html((d.data.name) + "<br>" + (d.data.total) + "<br>" + (d.data.percent) + "%");
+            <svg width="960" height="500">
+                <g transform="translate(480,250)">
+                    <g class="arc">
+                        <path d="M-74.16407864998747,228.25356391083682A240,240 0 1,1 209.13711734962433,117.73557723428148L156.85283801221826,88.3016829257111A180,180 0 1,0 -55.6230589874906,171.19017293312763Z"
+                            style="fill: rgb(153, 221, 0);"></path>
+                        <text transform="translate(-76.32080168777597,-195.64032107348214)" dy=".35em">外銷</text>
+                    </g>
+                    <g class="arc">
+                        <path d="M209.13711734962433,117.73557723428148A240,240 0 0,1 20.330370697932562,239.1373580754054L15.247778023449422,179.35301855655402A180,180 0 0,0 156.85283801221826,88.3016829257111Z"
+                            style="fill: rgb(187, 255, 0);"></path>
+                        <text transform="translate(113.57631490424363,176.63640817445335)" dy=".35em">焚燒</text>
+                    </g>
+                    <g class="arc">
+                        <path d="M20.330370697932562,239.1373580754054A240,240 0 0,1 -74.1640786499873,228.25356391083687L-55.62305898749048,171.19017293312766A180,180 0 0,0 15.247778023449422,179.35301855655402Z"
+                            style="fill: rgb(204, 255, 51);"></path>
+                        <text transform="translate(-24.028769319045832,208.62075219165538)" dy=".35em">內銷</text>
+                    </g>
+                </g>
+            </svg>
+
+            <script src="https://d3js.org/d3.v3.min.js"></script>
+            <script class="some">
+                var div = d3.select("body").append("div").attr("class", "toolTip");
+                var dataset = [
+                    { name: '外銷', total: 8124, percent: 67.9 },
+                    { name: '焚燒', total: 1610, percent: 13.5 },
+                    { name: '內銷', total: 660, percent: 5.5 }
+                ];
+                var width = 960,
+                    height = 500,
+                    radius = Math.min(width, height) / 2;
+                var color = d3.scale.ordinal()
+                    .range(["#99DD00", "#BBFF00", "#CCFF33", "#6b486b", "#a05d56"]);
+                var arc = d3.svg.arc()
+                    .outerRadius(radius - 10)
+                    .innerRadius(radius - 70);
+                var pie = d3.layout.pie()
+                    .sort(null)
+                    .startAngle(1.1 * Math.PI)
+                    .endAngle(3.1 * Math.PI)
+                    .value(function (d) { return d.total; });
+                var svg = d3.select("body").append("svg")
+                    .attr("width", width)
+                    .attr("height", height)
+                    .append("g")
+                    .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
+                var g = svg.selectAll(".arc")
+                    .data(pie(dataset))
+                    .enter().append("g")
+                    .attr("class", "arc");
+                g.append("path")
+                    .style("fill", function (d) { return color(d.data.name); })
+                    .transition().delay(function (d, i) {
+                        return i * 500;
+                    }).duration(1500)
+                    .attrTween('d', function (d) {
+                        var i = d3.interpolate(d.startAngle + 0.1, d.endAngle);
+                        return function (t) {
+                            d.endAngle = i(t);
+                            return arc(d)
+                        }
                     });
-                    d3.selectAll("path").on("mouseout", function (d) {
-                        div.style("display", "none");
-                    });
-                    //d3.select("body").transition().style("background-color", "#d3d3d3");
-                    function type(d) {
-                        d.total = +d.total;
-                        return d;
-                    }
-                </script>
-            </div>
+                g.append("text")
+                    .attr("transform", function (d) { return "translate(" + arc.centroid(d) + ")"; })
+                    .attr("dy", ".35em")
+                    .transition()
+                    .delay(1000)
+                    .text(function (d) { return d.data.name; });
+                d3.selectAll("path").on("mousemove", function (d) {
+                    div.style("left", d3.event.pageX + 10 + "px");
+                    div.style("top", d3.event.pageY - 25 + "px");
+                    div.style("display", "inline-block");
+                    div.html((d.data.name) + "<br>" + (d.data.total) + "<br>" + (d.data.percent) + "%");
+                });
+                d3.selectAll("path").on("mouseout", function (d) {
+                    div.style("display", "none");
+                });
+                //d3.select("body").transition().style("background-color", "#d3d3d3");
+                function type(d) {
+                    d.total = +d.total;
+                    return d;
+                }
+            </script>
+
             <p class="why">
                 資料來源：中華民國傷殘宏恩協會理事長湯劍雄
             </p>
@@ -1162,12 +1181,12 @@
 
 
     </article>
-    <footer >
+    <footer>
         <table class="shown-on-mobile">
-            <tbody >
+            <tbody>
                 <tr>
-                    <td >
-                        <div class="footer-circle" ></div>
+                    <td>
+                        <div class="footer-circle"></div>
                         <div class="footer-text">關於我們</div>
                     </td>
                     <td>
