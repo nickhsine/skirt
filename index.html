@@ -1,4 +1,9 @@
 <html>
+<!--李-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http:www.w3.or/TR/xhtml1-transitional.dtd">
+<html xmlins="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<meta charset="utf-8">
 
 <head>
     <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1, initial-scale=1">
@@ -10,12 +15,95 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
         crossorigin="anonymous">
+    <!--李-->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Untitled Document</title>
+
+    <link href="css.css" rel="stylesheet" type="text/css" />
 
     <style>
         * {
             -webkit-box-sizing: border-box;
             -moz-box-sizing: border-box;
             box-sizing: border-box;
+        }
+
+
+        /* CSS Document */
+
+        .round1 {
+            width: 150px;
+            height: 150px;
+            margin: 230px 150px 0px 405px;
+            -webkit-animation: rl 4s linear infinite;
+            animation: rl 2s linear infinite;
+        }
+
+        @keyframes rl {
+            0% {
+                transform: rotate(360deg)
+            }
+            ;
+            10% {
+                transform: rotate(0deg)
+            }
+            ;
+        }
+
+        .recycle01 {
+            position: absolute
+        }
+
+        .arc text {
+            font: 30px sans-serif;
+            text-anchor: middle;
+            font-family: "Microsoft JhengHei";
+        }
+
+        .arc path {
+            stroke: #fff;
+        }
+
+        .toolTip {
+            position: absolute;
+            display: none;
+            width: auto;
+            height: auto;
+            background: none repeat scroll 0 0 white;
+            border: 0 none;
+            border-radius: 8px 8px 8px 8px;
+            box-shadow: -3px 3px 15px #888888;
+            color: black;
+            font: 12px sans-serif;
+            padding: 5px;
+            text-align: center;
+        }
+
+        .some {
+            position: relative
+        }
+
+        .why {
+            position: absolute;
+            margin: 30px 0px 0px 600px;
+            font-family: "Microsoft JhengHei";
+            font-size: 18px;
+        }
+
+        .why2 {
+
+            margin: 20px 0px 0px 320px;
+            font-family: "Microsoft JhengHei";
+            font-size: 48px;
+            font-weight: bold;
+        }
+
+        .why3 {
+            position: absolute;
+            margin: 10px 0px 0px 425px;
+            font-family: "Microsoft JhengHei";
+            font-size: 48px;
+            font-weight: bold;
         }
 
         .area-title {
@@ -859,6 +947,84 @@
                 <h2>這些龐大的舊衣量，最終流向何方？</h2>
             </div>
 
+            <div class="recycle01">
+                <img src="recycle.png" class="round1" width: "100%" height="100%" />
+            </div>
+            <p class="why2">
+                台灣二手衣流向
+            </p>
+            <div class="bg">
+                <script src="https://d3js.org/d3.v3.min.js"></script>
+                <script class="some">
+                    var div = d3.select("body").append("div").attr("class", "toolTip");
+                    var dataset = [
+                        { name: '外銷', total: 8124, percent: 67.9 },
+                        { name: '焚燒', total: 1610, percent: 13.5 },
+                        { name: '內銷', total: 660, percent: 5.5 }
+                    ];
+                    var width = 960,
+                        height = 500,
+                        radius = Math.min(width, height) / 2;
+                    var color = d3.scale.ordinal()
+                        .range(["#99DD00", "#BBFF00", "#CCFF33", "#6b486b", "#a05d56"]);
+                    var arc = d3.svg.arc()
+                        .outerRadius(radius - 10)
+                        .innerRadius(radius - 70);
+                    var pie = d3.layout.pie()
+                        .sort(null)
+                        .startAngle(1.1 * Math.PI)
+                        .endAngle(3.1 * Math.PI)
+                        .value(function (d) { return d.total; });
+                    var svg = d3.select("body").append("svg")
+                        .attr("width", width)
+                        .attr("height", height)
+                        .append("g")
+                        .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
+                    var g = svg.selectAll(".arc")
+                        .data(pie(dataset))
+                        .enter().append("g")
+                        .attr("class", "arc");
+                    g.append("path")
+                        .style("fill", function (d) { return color(d.data.name); })
+                        .transition().delay(function (d, i) {
+                            return i * 500;
+                        }).duration(1500)
+                        .attrTween('d', function (d) {
+                            var i = d3.interpolate(d.startAngle + 0.1, d.endAngle);
+                            return function (t) {
+                                d.endAngle = i(t);
+                                return arc(d)
+                            }
+                        });
+                    g.append("text")
+                        .attr("transform", function (d) { return "translate(" + arc.centroid(d) + ")"; })
+                        .attr("dy", ".35em")
+                        .transition()
+                        .delay(1000)
+                        .text(function (d) { return d.data.name; });
+                    d3.selectAll("path").on("mousemove", function (d) {
+                        div.style("left", d3.event.pageX + 10 + "px");
+                        div.style("top", d3.event.pageY - 25 + "px");
+                        div.style("display", "inline-block");
+                        div.html((d.data.name) + "<br>" + (d.data.total) + "<br>" + (d.data.percent) + "%");
+                    });
+                    d3.selectAll("path").on("mouseout", function (d) {
+                        div.style("display", "none");
+                    });
+                    //d3.select("body").transition().style("background-color", "#d3d3d3");
+                    function type(d) {
+                        d.total = +d.total;
+                        return d;
+                    }
+                </script>
+            </div>
+            <p class="why">
+                資料來源：中華民國傷殘宏恩協會理事長湯劍雄
+            </p>
+            <p class="why3">
+                2017
+            </p>
+
             <p class="introduction">
                 全台舊衣量經官方統計約六萬多公噸，但仍有民眾經私下自行處理舊衣物，因數量無法統計，我們稱之為黑市。
             </p>
@@ -996,12 +1162,12 @@
 
 
     </article>
-    <footer>
+    <footer >
         <table class="shown-on-mobile">
-            <tbody>
+            <tbody >
                 <tr>
-                    <td>
-                        <div class="footer-circle"></div>
+                    <td >
+                        <div class="footer-circle" ></div>
                         <div class="footer-text">關於我們</div>
                     </td>
                     <td>
