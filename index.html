@@ -1,0 +1,841 @@
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="animate.css"></link>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+
+    <style>
+        * {
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+
+        .area-title {
+            text-align: center;
+        }
+
+        .area-title>img {
+            width: 100%;
+        }
+
+        .intro-font {
+            font-size: 20px;
+            line-height: 1.7;
+            color: #6a8280;
+        }
+
+        .a2-p-font {
+            font-size: 18px;
+            line-height: 1.56;
+            color: #6a8280;
+        }
+
+        .animation-block {
+            animation-fill-mode: backwards;
+            animation-play-state: paused;
+        }
+
+        .to-animate {
+            animation-fill-mode: both;
+            animation-play-state: running;
+        }
+
+        .bg {
+            max-width: 700px;
+            margin: 0 auto 0 auto;
+            overflow: hidden;
+        }
+
+        @media screen and (max-width: 768px) {
+            .bg {
+                max-width: 95%;
+            }
+        }
+
+        .a4-bg {
+            padding-bottom: calc(335/345*100%);
+            position: relative;
+        }
+
+        .a4-bg .toy {
+            position: absolute;
+            animation-fill-mode: inherit;
+            animation-play-state: inherit;
+            animation-duration: .3s;
+        }
+
+        .a4-bg .row1 {
+            width: 100%;
+            bottom: 0;
+            left: 0;
+            animation-delay: .5s;
+        }
+
+        .a4-bg .base-row {
+            width: calc(345/345*100%);
+            left: calc(10/540*100%);
+        }
+
+        .a4-bg .row2 {
+
+            bottom: calc(10/390*100%);
+            animation-delay: .8s;
+        }
+
+        .a4-bg .row3 {
+
+            bottom: calc(10/390*100%);
+            animation-delay: 1.3s;
+        }
+
+        .a4-bg .row4 {
+
+            bottom: calc(10/390*100%);
+            animation-delay: 1.8s;
+        }
+
+        .a4-bg .row5 {
+
+            bottom: calc(10/390*100%);
+            animation-delay: 2.3s;
+        }
+
+        .a4-bg .row6 {
+            bottom: calc(10/390*100%);
+            animation-delay: 2.8s;
+            width: calc(345/345*100%);
+            left: calc(17/540*100%);
+        }
+
+        .a4-bg .row7 {
+            bottom: calc(7/390*100%);
+            animation-delay: 3.1s;
+            left: calc(10/540*100%);
+            width: calc(345/345*100%);
+        }
+
+        .a4-bg .row8 {
+            width: calc(36/345*100%);
+            left: calc(265/345*100%);
+            bottom: calc(163/390*100%);
+            animation-delay: 3.3s;
+        }
+
+        body {
+            font-family: "Microsoft JhengHei", "Noto Sans TC", "PingFang TC", "Apple LiGothic Medium", Roboto, "Lucida Grande", "Lucida Sans Unicode", sans-serif;
+            background-color: #fff;
+        }
+
+        a {
+            color: #2d2d2d;
+            text-decoration: none;
+            border-bottom: 1px solid #c71b0a;
+        }
+
+        header,
+        article>header {
+            max-width: calc(270/320*100%);
+            margin: 0 auto;
+        }
+
+        @media screen and (min-width: 768px) and (max-width: 1023px) {
+            header {
+                width: 678px;
+            }
+
+            article,
+            article>header {
+                max-width: 678px;
+                margin: 0 auto;
+            }
+        }
+
+        @media screen and (min-width: 1024px) {
+            header {
+                width: 900px;
+            }
+
+            article,
+            article>header {
+                max-width: 900px;
+                margin: 0 auto;
+            }
+        }
+
+        header>table {
+            width: 100%;
+        }
+
+        article>header>span {
+            font-size: 16px;
+            font-weight: bold;
+            line-height: 2.25;
+        }
+
+        article>header>h1 {
+            margin-top: 11px;
+            font-size: 34px;
+            font-weight: bold;
+            line-height: 1.32;
+        }
+
+        article {
+            color: #2d2d2d;
+        }
+
+        article>figure {
+            margin: 40px 0 0 0;
+        }
+
+
+
+        @media screen and (min-width: 768px) and (max-width: 1023px) {
+            article>figure {
+                width: 100%;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .float-right {
+                float: left;
+                width: 500px;
+                margin-top: 20px;
+                margin-right: 20px;
+                margin-bottom: 30px;
+            }
+        }
+
+        @media screen and (min-width: 1024px) {
+            article>figure {
+                width: 100%;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .float-right {
+                float: right;
+                width: 360px;
+                margin-top: 40px;
+                margin-left: 40px;
+                margin-bottom: 50px;
+            }
+        }
+
+        article>p,
+        article>h2,
+        article>blockquote,
+        article>ul,
+        article article>div,
+        article>header {
+            max-width: calc(270/320*100%);
+            margin: 0 auto;
+        }
+
+        @media screen and (min-width: 768px) and (max-width: 1023px) {
+            article>p,
+            article>h2,
+            article>blockquote,
+            article>ul,
+            article figcaption,
+            article>div,
+            article>header,
+            article>ul {
+                width: 550px;
+            }
+        }
+
+        @media screen and (min-width: 1024px) {
+            article>p,
+            article>h2,
+            article>blockquote,
+            article>ul,
+            article figcaption,
+            article>div,
+            article>header {
+                max-width: 756px;
+            }
+            article>ul {
+                width: 700px;
+            }
+        }
+
+        article>ul {
+            width: 100%;
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        article video,
+        article audio {
+            margin-top: 40px;
+            width: 100%;
+        }
+
+        article>p,
+        article>blockquote {
+            font-size: 18px;
+            line-height: 2.0;
+            letter-spacing: 0.9px;
+            margin-top: 40px;
+        }
+
+        article>blockquote {
+            padding-left: 21px;
+            color: #6d6d6d;
+            border-left: 1px solid #6d6d6d;
+        }
+
+        article>h2 {
+            font-size: 22px;
+            font-weight: bold;
+            letter-spacing: 1.1px;
+            line-height: 1.64;
+            margin-top: 40px;
+        }
+
+        article figcaption {
+            font-size: 16px;
+            line-height: 1.5;
+            letter-spacing: 0.8px;
+            color: #6d6d6d;
+            margin-top: 15px;
+            margin-left: 200px;
+        }
+
+        .header {
+            margin-top: 17px;
+            margin-bottom: 17px;
+        }
+
+        .logo {
+            width: 100px;
+            height: 25px;
+            background-color: #e1e1e1;
+        }
+
+        .menu {
+            width: 22px;
+            height: 22px;
+            background-color: #e1e1e1;
+        }
+
+        .author {
+            margin-right: 30px;
+            font-size: 15px;
+            line-height: 2.25;
+        }
+
+        .introduction {
+            font-size: 22px;
+            line-height: 1.82;
+            letter-spacing: 1.6px;
+            text-align: justify;
+            margin-top: 30px;
+        }
+
+        .related-text {
+            font-size: 16px;
+            line-height: 2.25;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .related-items {
+            margin-bottom: 60px;
+        }
+
+        .related-item {
+            background-color: #e1e1e1;
+            margin-top: 20px;
+            padding: 20px;
+            cursor: pointer;
+        }
+
+        .related-item>img {
+            width: 20%;
+            vertical-align: middle;
+        }
+
+        .related-item>div {
+            display: inline-block;
+            width: 70%;
+            padding-left: 20px;
+            vertical-align: middle;
+            line-height: 1.5;
+        }
+
+        footer {
+            background-color: #bfbfbf;
+            min-height: 300px;
+        }
+
+        footer>table {
+            border-spacing: 45px;
+            width: 100%;
+        }
+
+        .footer-circle {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background-color: #777;
+            margin: 0 auto;
+        }
+
+        .footer-text {
+            margin-top: 15px;
+            font-size: 18px;
+            text-align: center;
+            color: #777;
+        }
+
+        .embed-box {
+            position: relative;
+            margin-top: 30px;
+        }
+
+        .embed-box>iframe {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        }
+
+
+
+        @media screen and (max-width: 767px) {
+            table.hidden-on-mobile {
+                display: none;
+            }
+
+            table.shown-on-mobile {
+                display: table;
+            }
+        }
+
+
+        @media screen and (min-width: 768px) {
+            table.hidden-on-mobile {
+                display: table;
+                max-width: 770px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            table.shown-on-mobile {
+                display: none;
+            }
+
+
+        }
+
+        @media screen and (min-width: 500px) {
+            table.hidden-on-mobile {
+                display: table;
+                max-width: 770px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            table.shown-on-mobile {
+                display: none;
+            }
+
+
+            .position-relative-top {
+                position: relative;
+                top: 0px;
+            }
+            .position-relative-top-left {
+                position: absolute;
+
+                top: 25%;
+                left: 33%;
+            }
+        }
+
+        .Base-map {
+            max-width: 100%;
+            position: relative;
+            margin: 0 auto;
+        }
+
+        .black-bar {
+            position: absolute;
+            top: calc(150/806*100%);
+            background-color: black;
+            opacity: 0.6;
+            width: 100%;
+            height: 150px;
+
+        }
+
+        .whitek-bar {
+            position: absolute;
+            top: calc(200/806*100%);
+            background-color: white;
+            opacity: 0.6;
+            width: 100%;
+            height: 300px;
+
+        }
+
+
+        .word1 {
+            font-weight: bold;
+            font-weight: 500;
+            font-size: 40px;
+            margin: auto;
+
+        }
+
+        .word2 {
+            font-weight: bold;
+            position: absolute;
+            font-weight: 700;
+            font-size: 30px;
+            margin: 30px 20px 10px 60px;
+            color: black;
+        }
+
+        .word3 {
+            font-weight: bold;
+            font-weight: 500;
+            font-size: 20px;
+            margin: auto;
+
+        }
+
+        .word4 {
+            font-weight: bold;
+            font-weight: 700;
+            font-size: calc(1000/806*100%);
+            margin: auto;
+            color: black;
+        }
+
+        .pict {
+            max-width: calc(680/1000*100%);
+            margin: 0 auto;
+        }
+    </style>
+
+</head>
+
+<body style="background-color: #F0F3C4">
+
+    <article>
+        <figure class="position-relative-top">
+            <img src="area-14/1.jpg" alt="img1-01 image of this article" width="100%" />
+        </figure>
+
+        <div class="word1 ">
+            <h1>它「衣舊」美麗，但「衣燃」不環保</h1>
+        </div>
+
+        <p class="introduction"> 與我們形影不離的衣物，當它功成身退， 民眾常選擇丟進舊衣回收箱或交由清潔隊處理。然而這些被遺棄的衣物， 你是否曾想過，它們可能是造成台灣垃圾危機的一大因子？ 事實上，舊衣經過回收，它們並非都能再找到新主人...
+        </p>
+
+        <figure>
+            <img src="area-14/2.jpg" alt="img3-sale image of this article" width="100%" />
+        </figure>
+        <figure>
+            <img src="area-14/8.jpg" alt="img3-sale image of this article" width="100%" />
+        </figure>
+        <p style="margin: 30 0px 20px 0">
+            台灣舊衣量逐年上升，「我覺得快時尚難辭其咎」。輔仁大學織品服裝學院院長蔡淑梨坦言，快時尚衣物搶搭流行且價格便宜，易吸引年輕人上門購買。臨床心理師林俊成說明，無論人們是想要追求潮流，還是不想錯過某一產品，這種時間相對落後感，會對個體產生一定程度的壓力。他進一步指出，為了促使消費者購物，業主常利用主打限量或快速更新樣式的手法，製造「稀缺效應」，讓消費者認為此商品可能短缺，便激起購物慾望。
+        </p>
+
+        <div class="word3">
+            <h1>2016年全球成衣產值</h1>
+        </div>
+
+        <div class="bg area-title">
+            <div id="area-13" class="animation-block a4-bg">
+                <img src="area-13/b2-1.png" class="toy row1 fadeInDown"></img>
+                <img src="area-13/b2-2.png" class="toy base-row row2 rotateIn fadeInDown"></img>
+                <img src="area-13/b2-3.png" class="toy base-row row3 rotateIn fadeInDown"></img>
+                <img src="area-13/b2-4.png" class="toy base-row row4 rotateIn fadeInDown"></img>
+                <img src="area-13/b2-5.png" class="toy base-row row5 rotateIn fadeInDown"></img>
+                <img src="area-13/b2-6.png" class="toy row6 fadeInDown"></img>
+                <img src="area-13/b2-7.png" class="toy  row7 fadeInRightBig"></img>
+            </div>
+
+            <p class="introduction">
+                根據世界貿易組織及《服裝新聞》資料指出，2016年全球成衣產值為4430億美元（約新台幣13兆元），在全球177家紡織服裝上市公司中，四大快時尚品牌（H&M、ZARA、UNIQLO、GAP）的產值就佔近兩成比例。這四大品牌在台灣共有96家分店，平均每縣市約有五家，顯示民眾容易購得快時尚衣物。然而，有學者指出，這類衣物通常做工粗糙且質料不佳，導致耐穿性不高。衣物生命週期縮短，反倒提升民眾丟衣頻率，台灣舊衣量因而逐年增加。
+            </p>
+
+            <figure>
+                <img src="area-14/4.jpg" alt="image of this article" width="100%" />
+            </figure>
+            <div class="word3 ">
+                <h1>這些龐大的舊衣量，最終流向何方？</h1>
+            </div>
+            <figure>
+                <img src="area-14/7.jpg" alt="img3-sale image of this article" width="100%" />
+            </figure>
+            <div class="word3">
+                <h1>全台舊衣量經官方統計約六萬多公噸，但仍有民眾經私下自行處理舊衣物，因數量無法統計，我們稱之為黑市。</h1>
+            </div>
+            <figure>
+                <img src="area-14/黑市全.png" alt="img3-sale image of this article" width="100%" />
+            </figure>
+
+            <!-- Carousel Component -->
+            <div id="carouselExampleIndicators" class="carousel slide" data-interval="false" style="width: 600px;height: 700px;" data-ride="carousel">
+                <ol class="carousel-indicators" >
+                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active" ></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+                </ol>
+
+                <div class="carousel-inner">
+                    <div class="carousel-item active" style="height: 100%; width: 100%">
+                        <img class="d-block w-100" src="area-14/a-01.png" style="object-fit: cover;" alt="First slide">
+
+                    </div>
+                    <div class="carousel-item" style="height: 100%; width: 100%">
+
+                        <img class="d-block w-100" src="area-14/a-02.png" style="object-fit: cover;" alt="Second slide">
+
+                    </div>
+                    <div class="carousel-item" style="height: 100%; width: 100%">
+
+                        <img class="d-block w-100" src="area-14/a-03.png" style="object-fit: cover;" alt="Second slide">
+
+                    </div>
+                    <div class="carousel-item" style="height: 100%; width: 100%">
+
+                        <img class="d-block w-100" src="area-14/a-04.png" style="object-fit: cover;" alt="Second slide">
+
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+
+            <!-- Optional JavaScript -->
+            <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+            <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+                crossorigin="anonymous"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+                crossorigin="anonymous"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+                crossorigin="anonymous"></script>
+
+                <figure>
+                    <img src="area-14/6.jpg" alt="img3-sale image of this article" width="100%" />
+                </figure>
+            <div class="word3">
+                <h1>全台舊衣量經官方統計約六萬多公噸，但仍有民眾經私下自行處理舊衣物，因數量無法統計，我們稱之為黑市。</h1>
+            </div>
+            <p class="introduction">舊衣回收業者、中華民國傷殘宏恩協會理事長湯劍雄無奈地說，中國的舊衣市場越趨壯大，台灣舊衣外銷的價格，從兩年前的一公斤10元，現在崩盤到一公斤僅剩1.5元，價差將近十倍。
+            </p>
+            <p class="introduction">「大陸的平均品質比台灣低，但因為可以挑，賣得比台灣好。」湯劍雄解釋，中國因人口眾多，製造出大量舊衣物，需求者就可以有更多選擇。他憂心，舊衣回收業的利潤逐年下滑，讓業者瀕臨倒閉，未來恐有更多衣物無人處理。然而快時尚規模龐大，民眾愛買衣服卻不盡其用，反倒造成衣物費。
+            </p>
+            <p class="introduction"> 事實上，被丟棄的衣物，製造過程已對環境造成汙染。蔡淑梨說明，衣物上架前須經染整，過程中會加入許多化學藥物。這些化學物質都需要由製衣廠支付費用，委託環保廠商妥善處理化學廢棄物。但快時尚衣物的銷售價格低廉，「有時候單價太低，實在是沒辦法去管理後續部分」，就連衣物本身可能也有毒物殘留。蔡淑梨也補充，有些製衣工廠即使設有回收設備，可自行處理化學廢棄物，但少數工廠卻可能偷偷排放廢水，造成環境汙染。
+            </p>
+            <figure>
+                <img src="area-14/3.jpg" alt="img3-sale image of this article" width="100%" />
+            </figure>
+            <div class="word3">
+                <h1>不只是染整帶來汙染，</h1>
+                <h1>製衣材料對環境的影響也不容小覷。</h1>
+            </div>
+            <figure>
+                <img src="area-14/01.png" alt="img3-sale image of this article" width="100%" />
+            </figure>
+            <figure>
+                <img src="area-14/02.png" alt="img3-sale image of this article" width="100%" />
+            </figure>
+            <figure>
+                <img src="area-14/03.png" alt="img3-sale image of this article" width="100%" />
+            </figure>
+
+            <figure>
+                <img src="area-14/5.jpg" alt="img3-sale image of this article" width="100%" />
+            </figure>
+            <div class="word3">
+                <h1>環保意識抬頭，民眾能將二手衣與環保連結。
+                
+                但椿花二手衣店主大樂認為， 重點是民眾願不願意為了環保而買二手衣。
+                </h1>
+            </div>
+
+
+            <p class="introduction"> 大樂感嘆，目前國內民眾對於二手衣的接受度仍不高，「時常將二手衣與『窮』和『鬼』畫上等號。」許多消費者認為購買二手衣，可能買到往生者的衣物，深怕魂魄纏身。再者，台灣過去為紡織代工國，衣物售價便宜，因此民眾傾向認為，需要救濟者及貧窮者才會穿二手衣。
+            </p>
+            <p class="introduction">同為二手衣業者的INST Recycle 平台創辦人Michelle也談到，為降低民眾對於可能穿到往生者衣物的疑慮，店內的二手衣來源多來自網紅與明星。她補充，在民眾尚未接受二手衣的狀態下，目前店內除販賣二手衣物，也會銷售快時尚衣物以維持營運，未來仍希望以販售二手衣為主。
+            </p>
+            <p class="introduction"> 不過同為二手衣物的古著，其命運與快時尚衣物截然不同。
+            </p>
+            <figure class="float-right ">
+                <img src="area-14/IMG_9209.jpg" alt="img3-sale image of this article" width="100%" />
+                <figcaption>
+                    圖／謝羽蓁攝
+                </figcaption>
+            </figure>
+
+            <p class="introduction"> 此外，許多民眾為追求流行，常會在每一季購買新衣服。但大樂認為，「衣服又沒壞，穿過季的衣服就算過時嗎？」因此，她不追求快速更新店內衣服樣式，反而鼓勵消費者能雋永穿搭，以購買代替丟棄。
+            </p>
+            <p class="introduction"> 大樂說明，店內選衣條件除不收破損、有黃斑的衣物外，也會檢查其做工是否精緻，衣服也不挑短期的流行樣式。「當一個風格開始流行，路上服裝店看起來都長得差不多。」大樂談到，許多衣物為搶搭流行，做工因而粗糙，一件衣服「只用一條鬆緊帶，或拷克直接外露，甚至拷克線直接連挑都不挑就上架。」因此她認為在快時尚的消費與產製模式下，能再度被利用的衣服其實不多。
+            </p>
+            <p class="introduction"> 在技術尚未發達前，製作一件衣服相當費工、耗時。大樂以台灣50至60年代的衣物為例，因需開模製造，加上一個模板需長期使用，每個環節都不得馬虎。反觀現今用電腦即可以快速修改，製衣流程迅速許多，便少了謹慎、苛求的美感。蔡淑梨也指出，以往若要追加衣服數目，「一個流程要等60天，出來市場就冷掉了。」
+            </p>
+            <figure class="float-right ">
+                <img src="area-14/9.jpg" alt="img3-sale image of this article" width="100%" />
+                <figcaption>
+                    圖／謝羽蓁攝
+                </figcaption>
+            </figure>
+
+            <p class="introduction">二手衣的保養程序繁複，大樂解釋，挑選回來的二手衣物，尚需經過高溫殺菌才能上架。另外，二手衣也須經熨燙，否則褶皺處易產生陰影，可能遮擋衣服的瑕疵。為導正民眾購衣習慣，大樂若遇到吊牌未剪或擺放在衣櫥數十年才拿來販賣的民眾，她便會以聊天方式灌輸「愛惜衣物」的概念。
+            </p>
+            <p class="introduction"> 大樂也認為民眾試穿衣服，能降低購衣後反悔而丟棄衣物的機率。因此她建議來店消費的客人一定要試穿，「不同的體型及體態都會影響穿衣感，甚至能透過試穿發現適合自己的新風格。」蔡淑梨也希望民眾能發揮「永續時尚」的精神，更應體認快時尚對於環境的衝擊，購買衣物前更應該三思。
+            </p>
+
+            <figure>
+                <img src="area-14/心理師回收.jpg" alt="img3-sale image of this article" width="100%" />
+            </figure>
+            <p class="introduction"> 臨床心理師林俊成也說明，消費者若要避免過度及衝動消費，購物前應先思考此商品為自身想要或是需要。但對於易衝動的購物者而言，遇到自己想要的產品，常會合理化其消費行為，說服自己該產品為必需品。因此林俊成建議，這類民眾可以尋求較理性的購物者陪同消費，幫忙看管荷包。
+            </p>
+
+            <div style="margin-bottom:10px">
+                <span class="author">採訪編輯／
+                    <b>
+                        <a href="https://www.facebook.com/profile.php?id=100001344265700" target="_blank"> 謝羽蓁</a>、
+                    </b>
+                    <b>
+                        <a href="https://www.facebook.com/profile.php?id=100000782258940" target="_blank"> 謝佩如 </a>、
+                    </b>
+                    <b>
+                        <a href="https://www.facebook.com/profile.php?id=100002617298606" target="_blank">劉芳妤</a>、
+                    </b>
+                    <b>
+                        <a href="https://www.facebook.com/profile.php?id=100002640666293" target="_blank">林宸佑 </a>
+                    </b>
+
+                </span>
+
+            </div>
+            <div style="margin-bottom:10px">
+                <span class="author">技術執行／
+                    <b>
+                        <a href="https://www.facebook.com/profile.php?id=100001344265700" target="_blank"> 白育綸觀點</a>、
+                    </b>
+                    <b>
+                        <a href="https://www.facebook.com/profile.php?id=100000782258940" target="_blank"> 狂大 </a>、
+                    </b>
+                    <b>
+                        <a href="https://www.facebook.com/profile.php?id=100002617298606" target="_blank">火哥</a>、
+                    </b>
+                    <b>
+                        <a href="https://www.facebook.com/profile.php?id=100002640666293" target="_blank">嘉容 </a>、
+                    </b>
+                    <b>
+                        <a href="https://www.facebook.com/profile.php?id=100002640666293" target="_blank">羽蓁</a>、
+                    </b>
+                    <b>
+                        <a href="https://www.facebook.com/profile.php?id=100002640666293" target="_blank">陳棟 </a>、
+                    </b>
+
+                </span>
+
+            </div>
+    </article>
+    <footer>
+        <table class="shown-on-mobile">
+            <tbody>
+                <tr>
+                    <td>
+                        <div class="footer-circle"></div>
+                        <div class="footer-text">關於我們</div>
+                    </td>
+                    <td>
+                        <div class="footer-circle"></div>
+                        <div class="footer-text">聯絡我們</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="footer-circle"></div>
+                        <div class="footer-text">關於我們</div>
+                    </td>
+                    <td>
+                        <div class="footer-circle"></div>
+                        <div class="footer-text">聯絡我們</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="hidden-on-mobile">
+            <tbody>
+                <tr>
+                    <td>
+                        <div class="footer-circle"></div>
+                        <div class="footer-text">關於我們</div>
+                    </td>
+                    <td>
+                        <div class="footer-circle"></div>
+                        <div class="footer-text">聯絡我們</div>
+                    </td>
+                    <td>
+                        <div class="footer-circle"></div>
+                        <div class="footer-text">關於我們</div>
+                    </td>
+                    <td>
+                        <div class="footer-circle"></div>
+                        <div class="footer-text">聯絡我們</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </footer>
+</body>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="
+    crossorigin="anonymous"></script>
+<script>
+    $.fn.isInViewport = function () {
+        var elementTop = $(this)
+            .offset()
+            .top;
+        var elementBottom = elementTop + $(this)
+            .outerHeight();
+
+        var viewportTop = $(window)
+            .scrollTop();
+        var viewportBottom = $(window).scrollTop() + window.innerHeight / 2;
+        return elementBottom > viewportTop && elementTop < viewportBottom;
+    };
+
+    $(window)
+        .on('resize scroll', function () {
+            $('.animation-block')
+                .each(function () {
+                    var activeArea = $(this)
+                        .attr('id');
+                    if ($(this)
+                        .isInViewport()) {
+                        $('#' + activeArea)
+                            .addClass('to-animate');
+                    }
+                });
+        });
+
+</script>
+
+</html>
