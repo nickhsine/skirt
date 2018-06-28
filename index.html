@@ -28,13 +28,9 @@
             box-sizing: border-box;
         }
 
-
-        /* CSS Document */
-
         .round1 {
             width: 150px;
             height: 150px;
-            margin: 230px 150px 0px 405px;
             -webkit-animation: rl 4s linear infinite;
             animation: rl 2s linear infinite;
         }
@@ -50,8 +46,22 @@
             ;
         }
 
+        #recycle-infograph {
+            position: relative;
+            padding-bottom: 60%;
+        }
+
+        #recycle-infograph>svg {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
         .recycle01 {
-            position: absolute
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
         }
 
         .arc text {
@@ -247,13 +257,6 @@
         .a2-bg .column7 {
             left: 84%;
         }
-
-
-
-
-
-
-
 
         .area-title {
             text-align: center;
@@ -933,7 +936,7 @@
             台灣舊衣量逐年上升，「我覺得快時尚難辭其咎」。輔仁大學織品服裝學院院長蔡淑梨坦言，快時尚衣物搶搭流行且價格便宜，易吸引年輕人上門購買。臨床心理師林俊成說明，無論人們是想追求潮流，或是不想錯過某一產品，這種時間相對落後感，會對個體產生一定程度的壓力。他更指出，為了促使消費者購物，業主常利用主打限量或快速更新樣式的手法，製造「稀缺效應」，讓消費者認為此商品可能短缺，便激起購物慾望。
         </p>
         <div style="margin: 20px auto">
-        <button type="button" data-toggle="modal" data-target="#myModal">
+            <button type="button" data-toggle="modal" data-target="#myModal">
                 點我認識快時尚
             </button>
         </div>
@@ -952,19 +955,19 @@
             <p class="introduction">
                 根據世界貿易組織及《服裝新聞》資料指出，2016年全球成衣產值為4430億美元（約新台幣13兆元），在全球177家紡織服裝上市公司中，四大快時尚品牌（H&M、ZARA、UNIQLO、GAP）的產值就佔近兩成比例。這四大品牌在台灣共96家分店，平均每縣市約有五家，顯示民眾容易購得快時尚衣物。然而，學者指出，這類衣物通常做工粗糙且質料不佳，導致耐穿性不高。衣物生命週期縮短，民眾丟衣頻率，台灣舊衣量因而逐年增加。
             </p>
-          
+
 
             <!-- Modal -->
             <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" style="width: 900px;">
-                <div class="modal-dialog" role="document"style="width: 900px;">
-                    <div class="modal-content"style="width: 100%;">
-                        <div class="modal-header"style="width: 900px;">
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"style="width: 900px;">
+                <div class="modal-dialog" role="document" style="width: 900px;">
+                    <div class="modal-content" style="width: 100%;">
+                        <div class="modal-header" style="width: 900px;">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="width: 900px;">
                                 <span aria-hidden="true">&times;</span>
                             </button>
-                            
+
                         </div>
-                        <div class="modal-body"style="width: 100%" >
+                        <div class="modal-body" style="width: 100%">
                             <figure>
                                 <img src="area-14/快時尚專區.png" alt="img3-sale image of this article" width="100%" />
                             </figure>
@@ -978,26 +981,26 @@
             </div>
             <!-- Modal -->
             <div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" style="width: 900px;">
-                    <div class="modal-dialog" role="document"style="width: 900px;">
-                        <div class="modal-content"style="width: 100%;">
-                            <div class="modal-header"style="width: 900px;">
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"style="width: 900px;">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                                
-                            </div>
-                            <div class="modal-body"style="width: 100%" >
-                                <figure>
-                                    <img src="area-14/古著專區.png" alt="img3-sale image of this article" width="100%" />
-                                </figure>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" data-dismiss="modal">Close</button>
-    
-                            </div>
+                <div class="modal-dialog" role="document" style="width: 900px;">
+                    <div class="modal-content" style="width: 100%;">
+                        <div class="modal-header" style="width: 900px;">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="width: 900px;">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+
+                        </div>
+                        <div class="modal-body" style="width: 100%">
+                            <figure>
+                                <img src="area-14/古著專區.png" alt="img3-sale image of this article" width="100%" />
+                            </figure>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" data-dismiss="modal">Close</button>
+
                         </div>
                     </div>
                 </div>
+            </div>
             <figure>
                 <img src="area-14/4.jpg" alt="image of this article" width="100%" />
             </figure>
@@ -1005,39 +1008,31 @@
                 <h2>舊衣終點 台灣二手衣何去何從?</h2>
             </div>
 
-            <div class="recycle01">
-                <img src="recycle.png" class="round1" width: "100%" height="100%" />
+            <div id="recycle-infograph">
+                <div class="recycle01">
+                    <img src="recycle.png" class="round1" width: "100%" height="100%" />
+                </div>
             </div>
 
 
-
-            <svg width="960" height="500">
-                <g transform="translate(480,250)">
-                    <g class="arc">
-                        <path d="M-74.16407864998747,228.25356391083682A240,240 0 1,1 209.13711734962433,117.73557723428148L156.85283801221826,88.3016829257111A180,180 0 1,0 -55.6230589874906,171.19017293312763Z"
-                            style="fill: rgb(153, 221, 0);"></path>
-                        <text transform="translate(-76.32080168777597,-195.64032107348214)" dy=".35em">外銷</text>
-                    </g>
-                    <g class="arc">
-                        <path d="M209.13711734962433,117.73557723428148A240,240 0 0,1 20.330370697932562,239.1373580754054L15.247778023449422,179.35301855655402A180,180 0 0,0 156.85283801221826,88.3016829257111Z"
-                            style="fill: rgb(187, 255, 0);"></path>
-                        <text transform="translate(113.57631490424363,176.63640817445335)" dy=".35em">焚燒</text>
-                    </g>
-                    <g class="arc">
-                        <path d="M20.330370697932562,239.1373580754054A240,240 0 0,1 -74.1640786499873,228.25356391083687L-55.62305898749048,171.19017293312766A180,180 0 0,0 15.247778023449422,179.35301855655402Z"
-                            style="fill: rgb(204, 255, 51);"></path>
-                        <text transform="translate(-24.028769319045832,208.62075219165538)" dy=".35em">內銷</text>
-                    </g>
-                </g>
-            </svg>
-
             <script src="https://d3js.org/d3.v3.min.js"></script>
             <script class="some">
-                var div = d3.select("body").append("div").attr("class", "toolTip");
-                var dataset = [
-                    { name: '外銷', total: 8124, percent: 67.9 },
-                    { name: '焚燒', total: 1610, percent: 13.5 },
-                    { name: '內銷', total: 660, percent: 5.5 }
+                var div = d3.select("#recycle-infograph").append("div").attr("class", "toolTip");
+                var dataset = [{
+                        name: '外銷',
+                        total: 8124,
+                        percent: 67.9
+                    },
+                    {
+                        name: '焚燒',
+                        total: 1610,
+                        percent: 13.5
+                    },
+                    {
+                        name: '內銷',
+                        total: 660,
+                        percent: 5.5
+                    }
                 ];
                 var width = 960,
                     height = 500,
@@ -1051,10 +1046,13 @@
                     .sort(null)
                     .startAngle(1.1 * Math.PI)
                     .endAngle(3.1 * Math.PI)
-                    .value(function (d) { return d.total; });
-                var svg = d3.select("body").append("svg")
-                    .attr("width", width)
-                    .attr("height", height)
+                    .value(function (d) {
+                        return d.total;
+                    });
+                var svg = d3.select("#recycle-infograph").append("svg")
+                    .attr("width", "100%")
+                    .attr("height", "100%")
+                    .attr("viewBox", '0 0 960 450')
                     .append("g")
                     .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
                 var g = svg.selectAll(".arc")
@@ -1062,7 +1060,9 @@
                     .enter().append("g")
                     .attr("class", "arc");
                 g.append("path")
-                    .style("fill", function (d) { return color(d.data.name); })
+                    .style("fill", function (d) {
+                        return color(d.data.name);
+                    })
                     .transition().delay(function (d, i) {
                         return i * 500;
                     }).duration(1500)
@@ -1074,11 +1074,15 @@
                         }
                     });
                 g.append("text")
-                    .attr("transform", function (d) { return "translate(" + arc.centroid(d) + ")"; })
+                    .attr("transform", function (d) {
+                        return "translate(" + arc.centroid(d) + ")";
+                    })
                     .attr("dy", ".35em")
                     .transition()
                     .delay(1000)
-                    .text(function (d) { return d.data.name; });
+                    .text(function (d) {
+                        return d.data.name;
+                    });
                 d3.selectAll("path").on("mousemove", function (d) {
                     div.style("left", d3.event.pageX + 10 + "px");
                     div.style("top", d3.event.pageY - 25 + "px");
@@ -1206,10 +1210,10 @@
             <p class="introduction"> 不過同為二手衣物的古著，其命運與快時尚衣物截然不同。
             </p>
             <div style="margin: 20px auto">
-                    <button type="button1" data-toggle="modal" data-target="#myModal1">
-                            點我認識古著
-                        </button>
-                    </div>
+                <button type="button1" data-toggle="modal" data-target="#myModal1">
+                    點我認識古著
+                </button>
+            </div>
             <figure class="float-right ">
                 <img src="area-14/IMG_9209.jpg" alt="img3-sale image of this article" width="100%" />
                 <figcaption>
@@ -1324,7 +1328,6 @@
                     }
                 });
         });
-
 </script>
 
 </html>
